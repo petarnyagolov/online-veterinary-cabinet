@@ -1,16 +1,16 @@
 # Online veterinary cabinet
 				Veterinary Medical Center
-technologies:
-	FrontEnd: Angular
-	Backend:Java + Spring, postgre || Node.js + MongoDB 
-Functionality:
- 1.Login JWT?
- 2.Table for search by animal's info or human's info 
- 3.Profile for animal CRUD:
-				-name,ages,type,breed,human/s(name, phone, email),history
- 4.Calendar for registry (Doctor)
- 5.Calendar for reservations (Human)
- 6.Push nothifications Human(android)
+	technologies:
+    	FrontEnd: Angular
+	 	Backend:Java + Spring, postgre || Node.js + MongoDB 
+	Functionality:
+ 		1.Login JWT?
+ 		2.Table for search by animal's info or human's info 
+ 		3.Profile for animal CRUD:
+			-name,ages,type,breed,human/s(name, phone, email),history
+ 		4.Calendar for registry (Doctor)
+ 		5.Calendar for reservations (Human)
+ 		6.Push nothifications Human(android)
 
 Must include: async, subject ,observable, promise, async operators 				
  
