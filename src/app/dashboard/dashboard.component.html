@@ -1,0 +1,23 @@
+<div>
+  <mat-toolbar>{{when}}</mat-toolbar>
+</div>
+
+
+<p>
+  <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-menu-item (click)="changeWhen('today')">Today</button>
+    <button mat-menu-item (click)="changeWhen('tomorrow')">Tomorrow</button>
+
+  </mat-menu>
+
+  <button>
+    <mat-toolbar-row>Animals</mat-toolbar-row>
+  </button>
+  <button>
+    <mat-toolbar-row>Calendar</mat-toolbar-row>
+  </button>
+</p>
