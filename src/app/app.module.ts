@@ -35,11 +35,11 @@ import {MatCardModule} from "@angular/material/card";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import { EventComponent } from './event/event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AnimalsComponent,
     DashboardComponent,
     HeaderComponent,
     AnimalDetailComponent,
@@ -47,7 +47,8 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
     CalendarComponent,
     AboutComponent,
     LoginComponent,
-    HumansComponent
+    HumansComponent,
+    EventComponent
 
   ],
   imports: [
@@ -74,7 +75,8 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
     MatProgressSpinnerModule,
     MatInputModule,
     MatButtonToggleModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AnimalsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
