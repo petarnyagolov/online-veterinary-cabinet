@@ -46,10 +46,7 @@ import { EventComponent } from './event/event.component';
     AnimalSearchComponent,
     CalendarComponent,
     AboutComponent,
-    LoginComponent,
-    HumansComponent,
-    EventComponent
-
+    LoginComponent
   ],
   imports: [
     BrowserModule,

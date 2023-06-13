@@ -14,7 +14,7 @@ import {MatButtonModule} from "@angular/material/button";
   imports: [MatButtonModule, MatTableModule],
 })
 export class AnimalsComponent {
-  displayedColumns: string[] = [ 'id','breed','name'];
+  displayedColumns: string[] = [ 'id','type','breed','name'];
   animals: Animal[] = [];
   dataSource = [...ANIMALS]
   @ViewChild(MatTable) table: MatTable<Animal>;

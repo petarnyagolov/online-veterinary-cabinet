@@ -8,10 +8,11 @@ import {AboutComponent} from "./about/about.component";
 import {HumansComponent} from "./humans/humans.component";
 import {AuthGuard} from "./auth.guard";
 import {LoginComponent} from "./login/login.component";
+import {EventComponent} from "./event/event.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full'},
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'events', component: EventComponent },
   { path: 'calendar', component: CalendarComponent },
   { path: 'about', component: AboutComponent },
   { path: 'detail/:id', component: AnimalDetailComponent },
