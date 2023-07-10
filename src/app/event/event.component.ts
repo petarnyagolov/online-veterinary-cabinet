@@ -14,7 +14,7 @@ import { Event } from "../models/event";
 export class EventComponent {
   events: Event[] = [];
   dataSource = [...EVENTS];
-  displayedColumns: string[] = [ 'id','animal.type','animal.name','description'];
+  displayedColumns: string[] = [ 'id','animal.type','animal.name','comment'];
   @ViewChild(MatTable) table: MatTable<Event>;
   constructor() {
     this.table = {} as MatTable<Event>;
