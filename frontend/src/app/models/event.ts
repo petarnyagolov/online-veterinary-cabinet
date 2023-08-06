@@ -5,6 +5,6 @@ export interface Event {
   animal: Animal
   dateTime: Date
   comment: string
-  // diagnose: string
-  // treatment: string
+  diagnose: string
+  treatment: string
 }
