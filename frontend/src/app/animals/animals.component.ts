@@ -2,7 +2,7 @@ import {Component, ViewChild} from '@angular/core';
 import {Animal} from "../models/animal";
 import {AnimalService} from "../animal.service";
 import {MatTable, MatTableModule} from '@angular/material/table';
-import {ANIMALS} from "../mock-animals";
+import { ANIMALS } from "../mock-animals";
 import {MatButtonModule} from "@angular/material/button";
 
 
