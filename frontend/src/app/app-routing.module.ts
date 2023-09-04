@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'events', component: EventComponent },
   { path: 'calendar', component: CalendarComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'detail/:id', component: AnimalDetailComponent },
+  { path: 'animals/:animalId', component: AnimalDetailComponent },
   { path: 'animals', component: AnimalsComponent} ,
   { path: 'humans', component: HumansComponent} ,
   { path: 'login', component: LoginComponent }

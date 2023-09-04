@@ -1,6 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {Animal} from "../models/animal";
-import {AnimalService} from "../animal.service";
+import {AnimalService} from "../services/animal.service";
 import {MatTable, MatTableModule} from '@angular/material/table';
 import { ANIMALS } from "../mock-animals";
 import {MatButtonModule} from "@angular/material/button";
@@ -22,12 +22,12 @@ export class AnimalsComponent {
     this.table = {} as MatTable<Animal>;
   }
   ngOnInit(): void{
-    this.getAnimals();
+    this.getAllAnimals();
 
   }
 
-  getAnimals(): void {
-    this.animalService.getAnimals()
+  getAllAnimals(): void {
+    this.animalService.getAllAnimals()
       .subscribe( animals => this.animals=animals)
   }
   addData() {

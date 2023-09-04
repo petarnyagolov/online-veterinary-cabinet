@@ -5,20 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cec61d8-ffe7-4acb-8af9-7e8a0b6bc13c" name="Changes" comment="Commit for github">
-      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/animal.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/event.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/human.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/mock-animals.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/mock-events.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/mock-humans.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/mock-users.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/shared/constants/urls.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/monkeyanimaliconsmile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/mock-users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/mock-users.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/animal-detail/animal-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animal-detail/animal-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/animal-detail/animal-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animal-detail/animal-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/animal.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animal.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/animal.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/animal.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/auth.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/shared/constants/urls.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/constants/urls.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,23 +63,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/work/git/online-veterinary-cabinet/backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\work\\git\\online-veterinary-cabinet\\backend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/work/git/online-veterinary-cabinet/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\work\\git\\online-veterinary-cabinet\\backend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\work\git\online-veterinary-cabinet\backend" />
@@ -81,11 +89,11 @@
       <recent name="C:\work\git\online-veterinary-cabinet\src\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\work\git\online-veterinary-cabinet\frontend\src\assets" />
+      <recent name="C:\work\git\online-veterinary-cabinet\frontend\src\app\services" />
       <recent name="C:\work\git\online-veterinary-cabinet\frontend\src\app\shared\constants" />
       <recent name="C:\work\git\online-veterinary-cabinet\frontend" />
       <recent name="C:\work\git\online-veterinary-cabinet\src\assets" />
-      <recent name="C:\work\git\online-veterinary-cabinet\src" />
-      <recent name="C:\work\git\online-veterinary-cabinet\src\app\models" />
     </key>
   </component>
   <component name="RunManager">
@@ -119,6 +127,9 @@
       <workItem from="1689864706939" duration="9033000" />
       <workItem from="1691329040076" duration="7453000" />
       <workItem from="1691391267640" duration="8653000" />
+      <workItem from="1692092809266" duration="2918000" />
+      <workItem from="1692196324400" duration="106000" />
+      <workItem from="1692196451899" duration="20513000" />
     </task>
     <servers />
   </component>

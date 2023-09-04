@@ -1,21 +1,29 @@
 <div class="container">
-  <div >
-    <p><mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Username</mat-label>
-    <input matInput placeholder="Enter your name" name="usename"
-           [(ngModel)] ="username">
-  </mat-form-field>
-    </p>
+  <div class="details">
+    <h1 matCardTitle >Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div class="input-container">
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill"><input matInput type="email" placeholder="Email" formControlName="email"/>
+          </mat-form-field>
+        </div>
+        <div class="error-list" *ngIf="fc['email'].errors && isSubmited">
+          <div *ngIf="fc['email'].errors">Should be valid</div>
+        </div>
+      </div>
+      <div class="input-container">
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill"><input matInput type="password" placeholder="Password"
+                                                                              formControlName="password"/>
+          </mat-form-field>
+        </div>
+        <div class="error-list" *ngIf="fc['password'].errors && isSubmited">
+          <div *ngIf="fc['password'].errors">Should not be empty</div>
+        </div>
+      </div>
+      <div>
+        <button mat-button mat-raised-button type="submit">Submit</button>
+      </div>
+    </form>
   </div>
-  <div>
-  <p><mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Password</mat-label>
-    <input matInput placeholder="Enter your password" value="" name="password" type="password" [(ngModel)]= "password">
-
-  </mat-form-field>
-  </p>
-  </div>
-  <mat-button-toggle class="mat-button" (click)="login(username,password)">Login</mat-button-toggle>
-
-
 </div>

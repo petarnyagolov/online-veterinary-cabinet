@@ -1,13 +1,31 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Animal} from "../models/animal";
+import {ActivatedRoute, Router} from "@angular/router";
+import {AnimalService} from "../services/animal.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-animal-detail',
   templateUrl: './animal-detail.component.html',
   styleUrls: ['./animal-detail.component.scss']
 })
-export class AnimalDetailComponent {
-  longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
-  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-  originally bred for hunting.`;
+export class AnimalDetailComponent implements OnInit {
+  animal!: Animal;
+
+
+  constructor(activatedRoute: ActivatedRoute, animalService: AnimalService) {
+    activatedRoute.params.subscribe((params)=>{
+      // if (params['animalId']) {
+      //   console.log(params['animalId'])
+        animalService.getAnimalById(params['animalId']).subscribe((animalDetails) => {
+          this.animal = animalDetails;
+        })
+      // }
+    })
+  }
+
+
+  ngOnInit(): void {
+  }
 
 }
