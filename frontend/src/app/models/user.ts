@@ -1,4 +1,7 @@
-export interface User {
-  email: string;
-  password: string;
+export class User {
+  id!: string;
+  email!: string;
+  name!: string;
+  isAdmin: boolean = false;
+  token:string='';
 }

@@ -7,3 +7,4 @@ export const EVENTS_URL= BASE_URL + '/api/events';
 export const EVENTS_SEARCH_URL= EVENTS_URL + '/search/:search';
 export const EVENT_BY_ID_URL= EVENTS_URL + '/:eventId';
 export const HUMANS_URL= BASE_URL + '/api/humans';
+export const USER_LOGIN_URL = BASE_URL + '/api/users/login'

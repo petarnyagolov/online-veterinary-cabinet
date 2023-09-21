@@ -5,28 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cec61d8-ffe7-4acb-8af9-7e8a0b6bc13c" name="Changes" comment="Commit for github">
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/monkeyanimaliconsmile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/configs/database.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/models/animal.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/models/human.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/models/user.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/routers/animal.router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/routers/user.router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/shared/interfaces/IUserLogin.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/animal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/animal.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/event.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/human.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/human.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/user.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/mock-animals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/mock-animals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/mock-events.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/mock-events.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/mock-humans.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/mock-humans.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/mock-users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/mock-users.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/animal-detail/animal-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animal-detail/animal-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/animal-detail/animal-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animal-detail/animal-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/animal.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animal.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/animal.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/animal.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/auth.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/auth.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/mock-animals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/mock-animals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/mock-events.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/mock-events.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/mock-humans.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/mock-humans.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/mock-users.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/animal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/animal.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/event.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/human.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/human.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/user.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/shared/constants/urls.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/constants/urls.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +76,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2Q1Eo4KPQoNUA7BmEGvudN7UbbS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -130,6 +151,13 @@
       <workItem from="1692092809266" duration="2918000" />
       <workItem from="1692196324400" duration="106000" />
       <workItem from="1692196451899" duration="20513000" />
+      <workItem from="1693840988407" duration="4982000" />
+      <workItem from="1693921859431" duration="25867000" />
+      <workItem from="1694184505288" duration="4654000" />
+      <workItem from="1694443985035" duration="594000" />
+      <workItem from="1694447555564" duration="6977000" />
+      <workItem from="1695108055586" duration="593000" />
+      <workItem from="1695122862384" duration="9703000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,7 @@
 import {Animal} from "./animal";
 
 export interface Event {
-  id: number
+  id: string
   animal: Animal
   dateTime: Date
   comment: string

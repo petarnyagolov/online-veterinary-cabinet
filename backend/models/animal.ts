@@ -1,7 +1,7 @@
 import {Human} from "./human";
 
 export interface Animal {
-  id: number;
+  id: string;
   name: string;
   type: string;
   breed: string;

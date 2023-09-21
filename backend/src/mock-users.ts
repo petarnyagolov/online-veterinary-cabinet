@@ -1,5 +1,5 @@
-import { User } from '../models/user';
+import {User} from '../models/user';
 
-export const USERS: User[]=[
-  {  email: 'gosho@email.com', password:"12345",name:"gosho",token:""}
+export const USERS: User[] = [
+    {id: '123123123121', name: 'user', email: 'gosho@email.com', password: "12345", isAdmin: false}
 ];

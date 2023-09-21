@@ -1,6 +1,6 @@
-export  interface Human {
-  id: number;
-  name: string;
-  phone: string;
-  email: string;
+export  class Human {
+  id!: string;
+  name!: string;
+  phone!: string;
+  email!: string;
 }
