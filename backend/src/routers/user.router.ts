@@ -4,43 +4,56 @@ import {Router} from "express";
 
 import asyncHandler from "express-async-handler";
 import {UserModel} from "../models/user.model";
-
+import bcrypt from 'bcryptjs';
+import { ServerSession } from "mongodb";
+import User from "../../models/user"
 const router = Router();
 
-router.get("/seed", asyncHandler(
-    async (req, res) => {
-        const usersCount = await UserModel.countDocuments();
-        if (usersCount > 0) {
-            res.send("Seed is already done!");
-            return;
-        }
-        await UserModel.create(USERS)
-        res.send("Seed is Done!")
-    }));
-router.post("/login", (req, res) => {
-    const {email, password} = req.body;
-    var user = USERS.find(user => {
-        user.email == email && user.password == password
-        console.log("email:", email, "password:", password)
-        console.log(user.name, user.email)
-        if (user) {
-            res.send(generateTokenResponse(user));
-            console.log("token")
+// method to import new user
+// router.get("/seed", asyncHandler(
+//     async (req, res) => {
+//         const usersCount = await UserModel.countDocuments();
+//         if (usersCount > 0) {
+//             res.send("Seed is already done!");
+//             return;
+//         }
+//         await UserModel.create(USERS)
+//         res.send("Seed is Done!")
+//     }));
 
-        } else {
-            res.status(400).send("Username or password is not valid!")
-            console.log("error")
-        }
-    })
+router.post("/login",  async (req, res) => {
+    const email = req.body['email'];
+    const password = req.body['password'];
+    const user = await UserModel.findOne({ email: email })
+    if (user && (await bcrypt.compareSync(password, user.password))) {
+        const token = generateTokenResponse(user);
+let userView =
+        user.set('token',token)
+        res.status(200).send(generateTokenResponse(user))
+    } else {
+        res.status(400).send("Username or password is not valid!")
+    }
+})
+router.post("/logout", async(req,res) =>{
+        req.body.session.token = null;
+        res.redirect('login')
+        return res.status(205).send("You will be back...");
 })
 
 const generateTokenResponse = (user: any) => {
-    user.token = jwt.sign({
+    let token = jwt.sign({
         email: user.email, name: user.name
     }, "secretOrPrivateKey", {
         expiresIn: "1d"
     });
-    return user;
+     return {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        address: user.address,
+        isAdmin: user.isAdmin,
+        token: token
+    };
 }
 
 export default router;

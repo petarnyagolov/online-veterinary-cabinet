@@ -19,7 +19,7 @@
       <button mat-button mat-raised-button color="primary" routerLink="/about">About</button>
     </li>
     <li *ngIf="isAuth">
-    <button mat-button mat-raised-button color="primary" routerLink="/login">{{user.name}}</button>
+      <a routerLink="animals">{{user.name}}</a>
     </li>
     <li *ngIf="!isAuth" href="/login">
       <button mat-button mat-raised-button color="primary" routerLink="/login">Login</button>

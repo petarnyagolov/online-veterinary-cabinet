@@ -26,7 +26,7 @@ import {LoginComponent} from './login/login.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {CalendarModule} from "angular-calendar";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 
 import {FullCalendarModule} from '@fullcalendar/angular';
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -41,6 +41,7 @@ import {InputContainerComponent} from "./input-container/input-container.compone
 import { InputValidationComponent } from './input-validation/input-validation.component';
 import { TextInputComponent } from './text-input/text-input.component';
 import { DefaultButtonComponent } from './default-button/default-button.component';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 @NgModule({
     declarations: [
@@ -90,7 +91,9 @@ import { DefaultButtonComponent } from './default-button/default-button.componen
             newestOnTop: false
         })
     ],
-    providers: [],
+    providers: [
+      {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true }
+    ],
     exports: [
         AnimalSearchComponent
     ],

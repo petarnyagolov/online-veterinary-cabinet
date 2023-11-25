@@ -6,7 +6,7 @@ import {HUMANS} from "./mock-humans";
 import {EVENTS} from "./mock-events";
 import animalRouter from "./routers/animal.router";
 import userRouter from "./routers/user.router";
-import {dbConnect} from "./configs/database.config";
+import { dbConnect } from "./configs/database.config";
 dbConnect();
 
 const app = express();
@@ -16,8 +16,8 @@ app.use(cors({
     origin: ["http://localhost:4200"]
 }));
 
-app.use("/api/animals",animalRouter);
-app.use("/api/users",userRouter);
+app.use("/api/animals", animalRouter);
+app.use("/api/users", userRouter);
 
 app.get("/api/humans", (req, res) => {
     res.send(JSON.stringify(HUMANS));
@@ -32,7 +32,9 @@ app.get("/api/events/search/:search", (req, res) => {
     res.send(EVENTS.filter(event => event.animal.name.includes(search)));
 })
 
+app.use(express.static('public'));
 const port = 5000;
+
 app.listen(port, () => {
     console.log("Website served on http://localhost:" + port);
 })

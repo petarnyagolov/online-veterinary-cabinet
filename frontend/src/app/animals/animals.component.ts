@@ -28,7 +28,9 @@ export class AnimalsComponent {
 
   getAllAnimals(): void {
     this.animalService.getAllAnimals()
-      .subscribe( animals => this.animals=animals)
+      .subscribe( animals => {
+        this.animals = animals
+      })
   }
   addData() {
     const randomElementIndex = Math.floor(Math.random() * this.animals.length);

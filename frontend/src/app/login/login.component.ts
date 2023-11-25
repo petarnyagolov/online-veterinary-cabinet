@@ -3,6 +3,9 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {UserService} from "../services/user.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {InputContainerComponent} from "../input-container/input-container.component";
+import { User } from "../models/user";
+import { BehaviorSubject } from "rxjs";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: 'app-login',
@@ -14,16 +17,16 @@ export class LoginComponent implements OnInit {
   password = "";
   loginForm!: FormGroup;
   isSubmitted = false;
-  returnUrl= '';
-
+  user = new User();
+  private userSubject = new BehaviorSubject<User>(this.user);
   login(username: string, password: string) {
     this.username = username;
     this.password = password;
 
   }
 
-  constructor(private formBuilder: FormBuilder, private userService: UserService,
-              private activatedRoute: ActivatedRoute,
+  constructor(private formBuilder: FormBuilder,
+              private userService: UserService,
               private router: Router) {
   }
 
@@ -32,7 +35,6 @@ export class LoginComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]]
     });
-    this.returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'];
   }
 
   get fc() {
@@ -43,9 +45,9 @@ export class LoginComponent implements OnInit {
     this.isSubmitted = true;
     if (this.loginForm.invalid) return;
 
-    this.userService.login({email:this.fc['email'].value, password: this.fc['password'].value}).subscribe(()=>{
-      this.router.navigateByUrl(this.returnUrl)
-    });
-
+    this.userService.login({ email: this.fc['email'].value, password: this.fc['password'].value }).subscribe(()=>{
+      this.router.navigateByUrl('/animals')
+    })
   }
+
 }
