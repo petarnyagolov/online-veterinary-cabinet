@@ -1,12 +1,12 @@
 <h2>Animals</h2>
 <div class="demo-button-container">
-  <button mat-raised-button (click)="addData()" class="demo-button">
+  <button mat-raised-button (click)="openCreateAnimalDialog()" class="demo-button">
     Add data
   </button>
   <button
     mat-raised-button
-    [disabled]="!dataSource.length"
-    (click)="removeData()"
+    [disabled]="!animals.length"
+    (click)="openCreateAnimalDialog()"
     class="demo-button">
     Remove data
   </button>
@@ -39,4 +39,14 @@
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
 </table>
+<!--<mat-paginator-->
+<!--  class="mat-elevation-z4"-->
+<!--  [pageIndex]="dataTableHandler.pageIndex"-->
+<!--  [pageSize]="dataTableHandler.pageSize"-->
+<!--  [pageSizeOptions]="pageSizeOptions"-->
+<!--  [length]="(massDeleteBlacklistsItemsExcelFileFailedRowsDataSource.totalItems$ | async) || 0"-->
+<!--&gt;-->
+<!--</mat-paginator>-->
+

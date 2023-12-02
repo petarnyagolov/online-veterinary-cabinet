@@ -7,7 +7,7 @@ export const EVENTS: Event[] = [
     dateTime: new Date(),
     diagnose: '',
     treatment: '',
-    animal: {id: '1', name: 'Шаро', type: 'dog', ages: 5, breed: 'bulldog',
+    animal: {id: '1', name: 'Шаро', type: 'dog', ages: 5, breed: { id:'2', breed:'NO BREED',type: { id:'1',type:'CAT' }},
       owner: {id: '1', name: 'Ivan', phone: '0883', email: 'ivan@email.com'}}
   },
   {
@@ -16,7 +16,7 @@ export const EVENTS: Event[] = [
     dateTime: new Date(),
     diagnose: '',
     treatment: '',
-    animal: { id: '2', name: 'Кити', type: 'cat', ages: 4, breed: 'persian',
+    animal: { id: '2', name: 'Кити', type: 'cat', ages: 4, breed: { id:'2', breed:'NO BREED',type: { id:'1',type:'CAT' }},
       owner: {id: '2', name: 'Ели', phone: '0883', email: 'eleonora@email.com'}
     }
   },
@@ -26,7 +26,7 @@ export const EVENTS: Event[] = [
     dateTime: new Date(),
     diagnose: '',
     treatment: '',
-    animal: {id: '3', name: 'BugsBunny', type: 'rabbit', ages: 4, breed: 'home',
+    animal: {id: '3', name: 'BugsBunny', type: 'rabbit', ages: 4, breed: { id:'2', breed:'NO BREED',type: { id:'1',type:'CAT' }},
       owner: {id: '3', name: 'Пешо', phone: '0883', email: 'pesho@email.com'}
     }
   }

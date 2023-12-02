@@ -42,6 +42,7 @@ import { InputValidationComponent } from './input-validation/input-validation.co
 import { TextInputComponent } from './text-input/text-input.component';
 import { DefaultButtonComponent } from './default-button/default-button.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { AnimalCreateComponent } from './animal-create/animal-create.component';
 
 @NgModule({
     declarations: [
@@ -85,6 +86,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
         MatButtonToggleModule,
         ReactiveFormsModule,
         AnimalsComponent,
+        AnimalCreateComponent,
         ToastrModule.forRoot({
             timeOut: 3000,
             positionClass: 'toast-bottom-right',

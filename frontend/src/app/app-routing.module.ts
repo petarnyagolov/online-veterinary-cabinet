@@ -8,6 +8,7 @@ import {HumansComponent} from "./humans/humans.component";
 import {LoginComponent} from "./login/login.component";
 import {EventComponent} from "./event/event.component";
 import { AuthGuard } from "./auth.guard";
+import { AnimalCreateComponent } from "./animal-create/animal-create.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'animals/:animalId', component: AnimalDetailComponent },
   { path: 'animals', component: AnimalsComponent,canActivate: [() => inject(AuthGuard).canActivate()]} ,
+  { path: 'animals/create', component: AnimalCreateComponent,canActivate: [() => inject(AuthGuard).canActivate()]} ,
   { path: 'humans', component: HumansComponent} ,
   { path: 'login', component: LoginComponent }
 

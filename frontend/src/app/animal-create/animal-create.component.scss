@@ -1,0 +1,16 @@
+mat-dialog-content {
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+form {
+  height: 100%;
+}
+
+mat-form-field {
+  margin: 0 auto;
+  padding: 5px;
+  border-style:hidden;
+}

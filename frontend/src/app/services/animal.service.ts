@@ -6,6 +6,7 @@ import {catchError, Observable, of, tap} from "rxjs";
 import {ANIMALS_URL} from "../shared/constants/urls";
 import {ANIMALS_SEARCH_URL} from "../shared/constants/urls";
 import {ANIMAL_BY_ID_URL} from "../shared/constants/urls";
+import { AnimalDialogData } from "../models/animal-dialog-data";
 
 @Injectable({
   providedIn: 'root'
@@ -48,4 +49,7 @@ export class AnimalService {
     };
   }
 
+  saveAnimal(animalDialogData: AnimalDialogData): Observable<Animal> {
+    return this.http.post<Animal>(ANIMALS_URL, animalDialogData);
+  }
 }

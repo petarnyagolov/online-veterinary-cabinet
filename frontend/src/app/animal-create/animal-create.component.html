@@ -1,0 +1,90 @@
+<div class="custom-dialog" >
+  <h2 mat-dialog-title >Add new animal</h2>
+  <form [formGroup]="createForm" (ngSubmit)="submit()">
+    <mat-dialog-content>
+      <div>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name"/>
+        <mat-error *ngIf="createForm.get('name')?.hasError('required')">
+          Name can't be empty
+        </mat-error>
+        <mat-error *ngIf="createForm.get('name')?.hasError('minlength')">
+          Name must be at most {{ commentMinLength }} characters long
+        </mat-error>
+        <mat-error *ngIf="createForm.get('comment')?.hasError('maxlength')">
+          Name must be at most {{ commentMaxLength }} characters long
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Type</mat-label>
+        <mat-select formControlName="type">
+          <mat-option *ngFor="let type of typeAnimal$ | async" [value]="type">
+            {{ type.type }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="createForm.get('type')?.hasError('required')">
+          Type is required
+        </mat-error>
+      </mat-form-field>
+        <mat-form-field>
+          <mat-label>Breed</mat-label>
+          <mat-select formControlName="breed">
+            <mat-option *ngFor="let breed of breedAnimal$ | async" [value]="breed">
+              {{ breed.breed }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+      <mat-form-field>
+        <mat-label>Comment</mat-label>
+        <input matInput formControlName="comment"/>
+        <mat-error *ngIf="createForm.get('comment')?.hasError('minlength')">
+          Comment must be at most {{ commentMinLength }} characters long
+        </mat-error>
+        <mat-error *ngIf="createForm.get('comment')?.hasError('maxlength')">
+          Comment must be at most {{ commentMaxLength }} characters long
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Birth Date</mat-label>
+        <input matInput formControlName="birthDate" [matDatepicker]="picker" />
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+        <p>
+          <mat-checkbox [formControl]="humanExists">Human exists</mat-checkbox>
+        </p>
+        <div [hidden]="Boolean(!humanExists.value)">
+        <mat-form-field  >
+          <mat-label >Human</mat-label>
+          <mat-select formControlName="human">
+            <mat-option *ngFor="let human of human$ | async" [value]="human">
+              {{ human.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        </div>
+        <div [hidden]="Boolean(humanExists.value)" >
+        <mat-form-field >
+          <mat-label>Human Name</mat-label>
+          <input matInput formControlName="humanName">
+        </mat-form-field>
+        <mat-form-field >
+          <mat-label>Human Phone</mat-label>
+          <input matInput formControlName="humanPhone">
+        </mat-form-field>
+        <mat-form-field  >
+          <mat-label>Human email</mat-label>
+          <input matInput formControlName="humanEmail">
+        </mat-form-field>
+        </div>
+      </div>
+      <div mat-dialog-actions align="center">
+        <button mat-stroked-button mat-dialog-close class="mr-3">Cancel</button>
+        <button mat-flat-button color="primary" type="submit" >Create</button>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>

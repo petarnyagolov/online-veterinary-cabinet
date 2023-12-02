@@ -36,7 +36,7 @@ router.get("/search/:search",
 
     });
 
-router.post('/create',
+router.post('',
     asyncHandler(async (req:any, res:any) => {
         const requestAnimal = req.body;
         const newAnimal = new AnimalModel({...requestAnimal});

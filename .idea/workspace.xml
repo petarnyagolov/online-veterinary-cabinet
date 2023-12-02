@@ -5,27 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cec61d8-ffe7-4acb-8af9-7e8a0b6bc13c" name="Changes" comment="Commit for github">
-      <change afterPath="$PROJECT_DIR$/backend/src/middlewares/authJwt.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/auth/auth.interceptor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/auth/guards/auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/models/animal-type.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/models/breed-animal.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/models/event.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/models/type-event.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/models/animal-dialog-data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/models/breed-animal.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/models/type-animal.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/services/breed.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/services/human.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/services/type.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/mock-users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/mock-users.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/models/animal.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/animal.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/routers/animal.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routers/animal.router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routers/user.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routers/user.router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/animals/animals.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/auth.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/mock-animals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/mock-animals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/mock-events.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/mock-events.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/animal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/animal.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/animal.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/animal.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/shared/constants/urls.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/shared/constants/urls.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,27 +72,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.Debug Javascript.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/work/git/online-veterinary-cabinet/frontend/src/app/auth",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.Angular CLI Server FE.executor": "Debug",
-    "npm.NODE.js BE.executor": "Debug",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "ts.external.directory.path": "C:\\work\\git\\online-veterinary-cabinet\\backend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.Debug Javascript.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/work/git/online-veterinary-cabinet/frontend/src/app/auth&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Angular CLI Server FE.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.NODE.js BE.executor&quot;: &quot;Debug&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\work\\git\\online-veterinary-cabinet\\backend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\work\git\online-veterinary-cabinet\frontend\src\app\auth" />
@@ -105,7 +109,7 @@
       <recent name="C:\work\git\online-veterinary-cabinet\src\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Debug Javascript">
+  <component name="RunManager" selected="npm.NODE.js BE">
     <configuration name="Debug Javascript" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -176,7 +180,8 @@
       <workItem from="1700318570389" duration="9022000" />
       <workItem from="1700476087666" duration="5724000" />
       <workItem from="1700655630814" duration="4796000" />
-      <workItem from="1700835378497" duration="14890000" />
+      <workItem from="1700835378497" duration="54626000" />
+      <workItem from="1701515464238" duration="6556000" />
     </task>
     <servers />
   </component>
@@ -202,22 +207,29 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/backend/src/middlewares/authJwt.ts</url>
           <line>4</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/frontend/src/app/auth.guard.ts</url>
           <line>18</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/frontend/src/app/services/user.service.ts</url>
           <line>26</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/frontend/src/app/animal-create/animal-create.component.ts</url>
+          <line>88</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="js.build_tools.npm">
+        <watch expression="req.rawHeaders" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
