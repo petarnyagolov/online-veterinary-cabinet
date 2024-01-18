@@ -1,12 +1,11 @@
 import {Injectable} from '@angular/core';
 import {Animal} from '../models/animal';
-import {ANIMALS} from "../mock-animals";
 import {HttpClient} from "@angular/common/http";
 import {catchError, Observable, of, tap} from "rxjs";
-import {ANIMALS_URL} from "../shared/constants/urls";
+import { ANIMALS, ANIMALS_URL_CREATE } from "../shared/constants/urls";
 import {ANIMALS_SEARCH_URL} from "../shared/constants/urls";
 import {ANIMAL_BY_ID_URL} from "../shared/constants/urls";
-import { AnimalDialogData } from "../models/animal-dialog-data";
+import { AnimalData } from "../models/animal-data";
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +14,9 @@ export class AnimalService {
 
   constructor(private http: HttpClient) {
   }
-
-  getAllAnimals(): Observable<Animal[]> {
-
-    return this.http.get<Animal[]>(ANIMALS_URL);
-  }
+getAllAnimals(page: number, size: number): Observable<Animal[]> {
+    return this.http.get<Animal[]>(ANIMALS + '?page=' + page + '&size=' + size);
+}
 
   getAllAnimalsWithSearch(search: string): Observable<Animal[]> {
 
@@ -38,18 +35,15 @@ export class AnimalService {
   private handleError<T>(operation = 'operation') {
     return (error: any): Observable<T> => {
 
-      // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead
+      console.error(error);
 
-      // TODO: better job of transforming error for user consumption
       this.log(`${operation} failed: ${error.message}`);
 
-      // Let the app keep running by returning an empty result.
       return new Observable<T>();
     };
   }
 
-  saveAnimal(animalDialogData: AnimalDialogData): Observable<Animal> {
-    return this.http.post<Animal>(ANIMALS_URL, animalDialogData);
+  saveAnimal(animalDialogData: Animal): Observable<Animal> {
+    return this.http.post<Animal>(ANIMALS_URL_CREATE, animalDialogData);
   }
 }

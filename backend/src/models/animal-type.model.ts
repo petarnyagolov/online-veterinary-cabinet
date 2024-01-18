@@ -5,7 +5,7 @@ export interface AnimalType {
     type: string;
 }
 
-export const TypeAnimalSchema = new Schema<AnimalTypeModel>(
+export const AnimalTypeSchema = new Schema<AnimalType>(
     {
         type: {type: String, required: true}
     }, {
@@ -18,4 +18,4 @@ export const TypeAnimalSchema = new Schema<AnimalTypeModel>(
         timestamps:true
     }
 )
-export const TypeAnimalModel = model<AnimalTypeModel>('animal_types', TypeAnimalSchema);
+export const AnimalTypeModel = model<AnimalType>('AnimalType', AnimalTypeSchema);

@@ -8,7 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AnimalsComponent} from './animals/animals.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatLineModule} from "@angular/material/core";
+import { MatLineModule, MatNativeDateModule } from "@angular/material/core";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatButtonModule} from "@angular/material/button";
@@ -43,6 +43,9 @@ import { TextInputComponent } from './text-input/text-input.component';
 import { DefaultButtonComponent } from './default-button/default-button.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { AnimalCreateComponent } from './animal-create/animal-create.component';
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatSelectModule } from "@angular/material/select";
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
     declarations: [
@@ -58,41 +61,46 @@ import { AnimalCreateComponent } from './animal-create/animal-create.component';
         InputContainerComponent,
         InputValidationComponent,
         TextInputComponent,
-        DefaultButtonComponent
+      AnimalCreateComponent,
+        DefaultButtonComponent,
     ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatLineModule,
-        MatChipsModule,
-        MatTabsModule,
-        MatButtonModule,
-        MatIconModule,
-        MatTableModule,
-        MatMenuModule,
-        NgOptimizedImage,
-        MatListModule,
-        MatDatepickerModule,
-        CalendarModule,
-        FormsModule,
-        HttpClientModule,
-        FullCalendarModule,
-        MatFormFieldModule,
-        MatCardModule,
-        MatProgressSpinnerModule,
-        MatInputModule,
-        MatButtonToggleModule,
-        ReactiveFormsModule,
-        AnimalsComponent,
-        AnimalCreateComponent,
-        ToastrModule.forRoot({
-            timeOut: 3000,
-            positionClass: 'toast-bottom-right',
-            newestOnTop: false
-        })
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatLineModule,
+    MatChipsModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTableModule,
+    MatMenuModule,
+    NgOptimizedImage,
+    MatListModule,
+    MatDatepickerModule,
+    CalendarModule,
+    FormsModule,
+    HttpClientModule,
+    FullCalendarModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatInputModule,
+    MatButtonToggleModule,
+    ReactiveFormsModule,
+    AnimalsComponent,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-bottom-right',
+      newestOnTop: false
+    }),
+    MatCheckboxModule,
+    MatSelectModule,
+    MatDialogModule
+  ],
     providers: [
       {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true }
     ],

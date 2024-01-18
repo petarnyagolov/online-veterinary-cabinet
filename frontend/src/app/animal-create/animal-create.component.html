@@ -1,7 +1,6 @@
-<div class="custom-dialog" >
-  <h2 mat-dialog-title >Add new animal</h2>
+<div  >
+  <h2  >Add new animal</h2>
   <form [formGroup]="createForm" (ngSubmit)="submit()">
-    <mat-dialog-content>
       <div>
       <mat-form-field>
         <mat-label>Name</mat-label>
@@ -16,27 +15,47 @@
           Name must be at most {{ commentMaxLength }} characters long
         </mat-error>
       </mat-form-field>
-      <mat-form-field>
-        <mat-label>Type</mat-label>
-        <mat-select formControlName="type">
-          <mat-option *ngFor="let type of typeAnimal$ | async" [value]="type">
-            {{ type.type }}
-          </mat-option>
-        </mat-select>
-        <mat-error *ngIf="createForm.get('type')?.hasError('required')">
-          Type is required
-        </mat-error>
-      </mat-form-field>
-        <mat-form-field>
-          <mat-label>Breed</mat-label>
-          <mat-select formControlName="breed">
-            <mat-option *ngFor="let breed of breedAnimal$ | async" [value]="breed">
-              {{ breed.breed }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+        <div>
+          <!--          <mat-checkbox [formControl]="typeExists">Type exists</mat-checkbox>-->
+          <div [hidden]="Boolean(!typeExists.value)">
+            <mat-form-field>
+              <mat-label>Type</mat-label>
+              <mat-select formControlName="type">
+                <mat-option *ngFor="let type of typeAnimal$ | async" [value]="type">
+                  {{ type.type }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <mat-checkbox [formControl]="typeExists">Type exists</mat-checkbox>
+          <div [hidden]="Boolean(typeExists.value)">
+            <mat-form-field>
+              <mat-label>Type Name</mat-label>
+              <input matInput formControlName="typeName">
+            </mat-form-field>
+          </div>
+        </div>
+        <div>
+          <div [hidden]="Boolean(!breedExists.value)">
+            <mat-form-field>
+              <mat-label>Breed</mat-label>
+              <mat-select formControlName="breed">
+                <mat-option *ngFor="let breed of breedAnimal$ | async" [value]="breed">
+                  {{ breed.breed }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <mat-checkbox [formControl]="breedExists">Breed exists</mat-checkbox>
+          <div [hidden]="Boolean(breedExists.value)">
+            <mat-form-field>
+              <mat-label>Breed Name</mat-label>
+              <input matInput formControlName="breedName">
+            </mat-form-field>
+          </div>
+        </div>
       </div>
-      <div>
+    <div>
       <mat-form-field>
         <mat-label>Comment</mat-label>
         <input matInput formControlName="comment"/>
@@ -81,10 +100,6 @@
         </mat-form-field>
         </div>
       </div>
-      <div mat-dialog-actions align="center">
-        <button mat-stroked-button mat-dialog-close class="mr-3">Cancel</button>
         <button mat-flat-button color="primary" type="submit" >Create</button>
-      </div>
-    </mat-dialog-content>
   </form>
 </div>

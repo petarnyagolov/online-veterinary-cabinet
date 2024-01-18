@@ -15,12 +15,9 @@ export class AnimalDetailComponent implements OnInit {
 
   constructor(activatedRoute: ActivatedRoute, animalService: AnimalService) {
     activatedRoute.params.subscribe((params)=>{
-      // if (params['animalId']) {
-      //   console.log(params['animalId'])
         animalService.getAnimalById(params['animalId']).subscribe((animalDetails) => {
           this.animal = animalDetails;
         })
-      // }
     })
   }
 

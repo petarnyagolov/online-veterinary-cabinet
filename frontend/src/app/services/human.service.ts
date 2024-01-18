@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { TypeAnimal } from "../models/type-animal";
 import { Human } from "../models/human";
+import { HUMANS, HUMANS_CREATE } from "../shared/constants/urls";
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +15,10 @@ export class HumanService {
   }
 
   getAllHumans(): Observable<Human[]> {
-    return new Observable(observer => {
-      let human: Human = { 'id': 'id', 'name': 'Pesho Goshov','phone':'0881234567','email':'gosho@email.com' }
-      observer.next([human]);
-      observer.complete();
-    })
+    return this.http.get<Human[]>(HUMANS)
+  }
+
+  saveHuman(human: Human) {
+    return this.http.post<Human>(HUMANS_CREATE, human)
   }
 }

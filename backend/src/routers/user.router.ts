@@ -9,17 +9,7 @@ import { ServerSession } from "mongodb";
 import User from "../../models/user"
 const router = Router();
 
-// method to import new user
-// router.get("/seed", asyncHandler(
-//     async (req, res) => {
-//         const usersCount = await UserModel.countDocuments();
-//         if (usersCount > 0) {
-//             res.send("Seed is already done!");
-//             return;
-//         }
-//         await UserModel.create(USERS)
-//         res.send("Seed is Done!")
-//     }));
+
 
 router.post("/login",  async (req, res) => {
     const email = req.body['email'];

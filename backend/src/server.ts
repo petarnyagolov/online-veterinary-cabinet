@@ -7,6 +7,8 @@ import {EVENTS} from "./mock-events";
 import animalRouter from "./routers/animal.router";
 import userRouter from "./routers/user.router";
 import { dbConnect } from "./configs/database.config";
+import typeRouter from "./routers/type.router";
+import breedRouter from "./routers/breed.router";
 dbConnect();
 
 const app = express();
@@ -17,6 +19,10 @@ app.use(cors({
 }));
 
 app.use("/api/animals", animalRouter);
+app.use("/api/types", typeRouter);
+app.use("/api/breeds", breedRouter);
+
+
 app.use("/api/users", userRouter);
 
 app.get("/api/humans", (req, res) => {

@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { TypeAnimal } from "../models/type-animal";
 import { Injectable } from "@angular/core";
+import { TYPES_CREATE, TYPES } from "../shared/constants/urls";
 
 @Injectable({
   providedIn: 'root'
@@ -11,10 +12,10 @@ export class TypeService {
   }
 
   getAllTypes(): Observable<TypeAnimal[]> {
-    return new Observable(observer => {
-      let typeAnimal: TypeAnimal = { 'id': 'id', 'type': 'CAT' }
-      observer.next([typeAnimal]);
-      observer.complete();
-    })
+    return this.http.get<TypeAnimal[]>(TYPES)
+  }
+
+  saveType(typeAnimal: TypeAnimal): Observable<TypeAnimal> {
+    return this.http.post<TypeAnimal>(TYPES_CREATE, typeAnimal);
   }
 }

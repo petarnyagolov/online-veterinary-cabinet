@@ -1,11 +1,12 @@
 import { Human } from "./human";
 import { BreedAnimal } from "./breed-animal";
+import {TypeAnimal} from "./type-animal";
 
-export interface AnimalDialogData{
+export interface AnimalData {
   id: string;
   name: string;
-  type: string;
+  type: TypeAnimal;
   breed: BreedAnimal;
   ages: number;
-  owner?: Human;
+  human?: Human | null;
 }

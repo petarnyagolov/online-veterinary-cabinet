@@ -3,6 +3,7 @@ import {Animal} from "../models/animal";
 import {AnimalService} from "../services/animal.service";
 import {Observable} from "rxjs";
 import {ActivatedRoute} from "@angular/router";
+import { AnimalData } from "../models/animal-data";
 
 @Component({
   selector: 'app-dashboard',
@@ -20,7 +21,7 @@ export class DashboardComponent implements OnInit {
       if (params["search"])
         animalObservable = this.animalService.getAllAnimalsWithSearch(params["search"])
       else
-        animalObservable = this.animalService.getAllAnimals()
+        animalObservable = this.animalService.getAllAnimals(0,100)
 
       animalObservable.subscribe((serverAnimals) => {
         this.animals = serverAnimals
@@ -35,7 +36,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getAnimals(): void {
-    this.animalService.getAllAnimals()
+    this.animalService.getAllAnimals(0,100)
       .subscribe(animals => this.animals = animals)
   }
 
