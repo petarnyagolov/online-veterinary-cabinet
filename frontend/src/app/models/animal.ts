@@ -3,7 +3,7 @@ import { BreedAnimal } from "./breed-animal";
 import { TypeAnimal } from "./type-animal";
 
 export class Animal {
-  id?: string;
+  _id?: string;
   name!: string;
   type?: TypeAnimal;
   breed?: BreedAnimal;

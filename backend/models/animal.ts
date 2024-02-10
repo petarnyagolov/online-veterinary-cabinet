@@ -1,7 +1,7 @@
 import {Human} from "./human";
+import { Types } from "mongoose";
 
 export interface Animal {
-  id: string;
   name: string;
   type: string;
   breed: string;

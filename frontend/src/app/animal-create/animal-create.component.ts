@@ -75,43 +75,43 @@ export class AnimalCreateComponent implements OnInit {
   submit(): void {
     if (this.createForm.valid) {
 
-      const data: Animal = { ...this.createForm.value };
-      if(this.humanExists.value==false){
-        this.humanName.setValue(this.humanName);
-        this.humanPhone.setValue(this.humanPhone);
-        this.humanEmail.setValue(this.humanEmail);
-
-        const human: Human = {
-          name: this.humanName.value,
-          phone: this.humanPhone.value,
-          email: this.humanEmail.value
-        }
-        this.humanService.saveHuman(human).subscribe({
-          next: () => this.toastrService.success(`Human is created`),
-          error: (error:HttpErrorResponse) => this.toastrService.error(error.message)
-        });
-      }
-      if(this.typeExists.value==false){
-        const type: TypeAnimal = {
-          type: this.createForm.get('typeName')?.value
-        }
-
-        this.typeService.saveType(type).subscribe({
-          next: () => this.toastrService.success(`Type is created`),
-          error: (error: HttpErrorResponse) => this.toastrService.error(error.message)
-        });
-      }
-      if(this.breedExists.value==false){
-        const breed: BreedAnimal = {
-          breed: this.createForm.get('breedName')?.value,
-          type: this.createForm.get('type')?.value
-
-        }
-        this.breedService.saveBreed(breed).subscribe({
-          next: () => this.toastrService.success(`Breed is created`),
-          error: (error:HttpErrorResponse) => this.toastrService.error(error.message)
-        });
-      }
+      const data: AnimalData = { ...this.createForm.value };
+      // if(this.humanExists.value==false){
+      //   this.humanName.setValue(this.humanName);
+      //   this.humanPhone.setValue(this.humanPhone);
+      //   this.humanEmail.setValue(this.humanEmail);
+      //
+      //   const human: Human = {
+      //     name: this.humanName.value,
+      //     phone: this.humanPhone.value,
+      //     email: this.humanEmail.value
+      //   }
+      //   this.humanService.saveHuman(human).subscribe({
+      //     next: () => this.toastrService.success(`Human is created`),
+      //     error: (error:HttpErrorResponse) => this.toastrService.error(error.message)
+      //   });
+      // }
+      // if(this.typeExists.value==false){
+      //   const type: TypeAnimal = {
+      //     type: this.createForm.get('typeName')?.value
+      //   }
+      //
+      //   this.typeService.saveType(type).subscribe({
+      //     next: () => this.toastrService.success(`Type is created`),
+      //     error: (error: HttpErrorResponse) => this.toastrService.error(error.message)
+      //   });
+      // }
+      // if(this.breedExists.value==false){
+      //   const breed: BreedAnimal = {
+      //     breed: this.createForm.get('breedName')?.value,
+      //     type: this.createForm.get('type')?.value
+      //
+      //   }
+      //   this.breedService.saveBreed(breed).subscribe({
+      //     next: () => this.toastrService.success(`Breed is created`),
+      //     error: (error:HttpErrorResponse) => this.toastrService.error(error.message)
+      //   });
+      // }
 
       this.createAnimal(data);
     }else {
@@ -131,15 +131,19 @@ export class AnimalCreateComponent implements OnInit {
     }
 
   }
-  private createAnimal(animalData: Animal) {
-    let animal: Animal;
-    animal = {
-      id: animalData.id,
+  private createAnimal(animalData: AnimalData) {
+    const animal: AnimalData = {
       name: animalData.name,
-      breed: this.createForm.get('breed')?.value,
-      type: this.createForm.get('type')?.value,
+      breed: this.createForm.get('breed')?.value || this.createForm.get('breedName')?.value || null,
+      type: this.createForm.get('type')?.value || this.createForm.get('typeName')?.value || null,
       ages: animalData.ages,
-      human: animalData.human
+      comment: this.createForm.get('comment')?.value || null,
+      birthDate: this.createForm.get('birthDate')?.value || null,
+      human: animalData.human || {
+        name: this.createForm.get('humanName')?.value || null,
+        phone: this.createForm.get('humanPhone')?.value || null,
+        email: this.createForm.get('humanEmail')?.value || null
+      }
     };
     this.animalService.saveAnimal(animal).subscribe({
       next: () => this.toastrService.success(`${animalData.name} is created`),

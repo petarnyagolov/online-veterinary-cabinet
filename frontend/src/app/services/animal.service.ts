@@ -43,7 +43,7 @@ getAllAnimals(page: number, size: number): Observable<Animal[]> {
     };
   }
 
-  saveAnimal(animalDialogData: Animal): Observable<Animal> {
-    return this.http.post<Animal>(ANIMALS_URL_CREATE, animalDialogData);
+  saveAnimal(animalData: AnimalData): Observable<Animal> {
+    return this.http.post<Animal>(ANIMALS_URL_CREATE, animalData);
   }
 }

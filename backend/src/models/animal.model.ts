@@ -2,15 +2,16 @@ import { model, Schema, Types } from "mongoose";
 import { AnimalBreedModel } from "./animal-breed.model";
 import { AnimalType } from "./animal-type.model";
 import { AnimalBreed } from "./animal-breed.model";
+import { Human } from "./human.model";
 
 
 export interface Animal {
     _id: Types.ObjectId;
     name: string;
-    type: AnimalType;
-    breed: AnimalBreed;
-    birthDate: Date;
-    description: string;
+    type?: AnimalType;
+    breed?: AnimalBreed;
+    birthDate?: Date;
+    description?: string;
     human?: Types.ObjectId;
 }
 

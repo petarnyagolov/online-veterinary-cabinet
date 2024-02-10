@@ -1,6 +1,6 @@
 import { TypeAnimal } from "./type-animal";
 export class BreedAnimal {
-  id?: string;
+  _id?: string;
   type!: TypeAnimal;
   breed!: string;
 }

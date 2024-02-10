@@ -1,30 +1,28 @@
-import { model, Schema } from "mongoose";
+import { model, Schema, Types } from "mongoose";
 
-export interface Human{
-    _id: string;
+export interface Human {
+    _id: Types.ObjectId;
     name: string;
     email: string;
     phone: string;
     animals?: string[];
 
-
-
 }
+
 export const HumanSchema = new Schema<Human>(
     {
-        _id: {type: String, required: true},
-        name: {type: String, required: true},
-        email: {type: String, required: true},
-        phone: {type: String, required: true},
-        animals: [{type: String, ref: 'Animal'}]
+        name: { type: String, required: true },
+        email: { type: String },
+        phone: { type: String },
+        animals: [{ type: String, ref: 'Animal' }]
     }, {
         toJSON: {
             virtuals: true
         },
-        toObject:{
-            virtuals:true
+        toObject: {
+            virtuals: true
         },
-        timestamps:true
+        timestamps: true
 
     }
 )

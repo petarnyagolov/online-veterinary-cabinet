@@ -1,4 +1,4 @@
 export class TypeAnimal {
-  id?: string;
+  _id?: string;
   type!: string;
 }

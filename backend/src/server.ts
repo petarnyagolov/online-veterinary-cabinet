@@ -9,6 +9,7 @@ import userRouter from "./routers/user.router";
 import { dbConnect } from "./configs/database.config";
 import typeRouter from "./routers/type.router";
 import breedRouter from "./routers/breed.router";
+import humanRouter from "./routers/human.router";
 dbConnect();
 
 const app = express();
@@ -21,13 +22,11 @@ app.use(cors({
 app.use("/api/animals", animalRouter);
 app.use("/api/types", typeRouter);
 app.use("/api/breeds", breedRouter);
-
+app.use("/api/humans", humanRouter);
 
 app.use("/api/users", userRouter);
 
-app.get("/api/humans", (req, res) => {
-    res.send(JSON.stringify(HUMANS));
-})
+
 
 app.get("/api/events", (req, res) => {
     res.send(JSON.stringify(EVENTS));
@@ -35,7 +34,7 @@ app.get("/api/events", (req, res) => {
 
 app.get("/api/events/search/:search", (req, res) => {
     const search = req.params.search;
-    res.send(EVENTS.filter(event => event.animal.name.includes(search)));
+    res.send(EVENTS.filter(event => event.treatment.includes(search)));
 })
 
 app.use(express.static('public'));
